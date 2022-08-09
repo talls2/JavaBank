@@ -74,7 +74,7 @@ public class Conta {
             setSaldo(getSaldo() - valor);
 
             contaParaDeposito.saldo  = contaParaDeposito.getSaldo() + valor;  //This block deposits the value on the
-            System.out.println("Transferência efetuada com sucesso!"); //other account
+            System.out.println("Transferência efetuada com sucesso!");        //other account
         }else {
             System.out.println("Não foi possivel realizar a transferência");
         }
