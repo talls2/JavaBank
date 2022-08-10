@@ -88,12 +88,12 @@ public class AgenciaBancaria {
                     conta = c; //se bater, retorna a conta
                 }
             }
-            return conta;
+
         } else {
             System.out.println("Não existem contas criadas");
-            return conta;
-        }
 
+        }
+        return conta;
     }
 
     public static void depositar() {
@@ -124,6 +124,7 @@ public class AgenciaBancaria {
             Double valorSaque = input.nextDouble();
             conta.sacar(valorSaque);
         }
+        operacoes();
     }
     public static void transferir() {
         System.out.println("Insira a conta de origem");
@@ -149,7 +150,7 @@ public class AgenciaBancaria {
         else {
             System.out.println("Conta informada invalida");
         }
-
+        operacoes();
     }
     public static void listar() {
         if (contasBancarias.size() > 0) {
@@ -160,6 +161,7 @@ public class AgenciaBancaria {
         else{
                 System.out.println("Não há contas cadastradas!");
             }
+        operacoes();
     }
 
 
@@ -177,5 +179,6 @@ public class AgenciaBancaria {
         else {
             System.out.println("Conta inexistente");
         }
+        operacoes();
     }
 }

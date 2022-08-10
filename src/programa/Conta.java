@@ -43,14 +43,14 @@ public class Conta {
         return  "\nNúmero da conta: " + this.getNumeroConta() +
                 "\nNome: " + this.pessoa.getNome() +
                 "\nCPF: " + this.pessoa.getCpf() +
-                "\nEmail" + this.pessoa.getEmail() +
-                "\nSaldo " + Utils.doubleToString(this.getSaldo())+
+                "\nEmail: " + this.pessoa.getEmail() +
+                "\nSaldo: " + Utils.doubleToString(this.getSaldo())+
                 "\n";
     }
     // method to deposit some valor in the account
     public void depositar(Double valor) {
         if(valor > 0){
-            setSaldo(getSaldo() += valor);
+            setSaldo(getSaldo() + valor);
             System.out.println("Depósito realizado com sucesso!");
         }
         else{
