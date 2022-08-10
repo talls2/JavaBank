@@ -131,27 +131,28 @@ public class AgenciaBancaria {
         int numeroConta1 = input.nextInt();
 
         Conta conta1 = encontrarConta(numeroConta1);
-
-        System.out.println("Insira a conta que irá receber a transferencia ");
-        int numeroConta2 = input.nextInt();
-
-        Conta conta2 = encontrarConta(numeroConta2);
-
         if (conta1 != null) {
+            System.out.println("Insira a conta que irá receber a transferencia ");
+            int numeroConta2 = input.nextInt();
+
+            Conta conta2 = encontrarConta(numeroConta2);
+
             if (conta2 != null) {
+                System.out.println("insira o valor da transferencia");
                 Double valorTransferencia = input.nextDouble();
+
                 conta1.transferir(conta2, valorTransferencia);
             }
             else {
                 System.out.println("Conta informada invalida");
             }
-
         }
         else {
             System.out.println("Conta informada invalida");
         }
         operacoes();
     }
+
     public static void listar() {
         if (contasBancarias.size() > 0) {
             for (Conta conta : contasBancarias) {
